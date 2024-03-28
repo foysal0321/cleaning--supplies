@@ -1,9 +1,9 @@
 import FilterProduct from "@/components/products/FilterProduct"
 import ProductCard from "@/components/products/ProductCard"
 
-export default async function ProductsPage () {
+export default async function ProductsPage() {
 
-  const res = await fetch(`http://localhost:5000/products`,{
+  const res = await fetch(`https://cleaning-supplies.vercel.app/products`, {
     next: {
       revalidate: 30
     }
@@ -20,11 +20,11 @@ export default async function ProductsPage () {
       <div className=" max-w-[900px]">
         <h2 className='text-3xl font-semibold'>Our Collection Of Products </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-16">
-        {
-          products.map((product: any) => 
-            <ProductCard key={product.id} product={product} />
-          )
-        }
+          {
+            products.map((product: any) =>
+              <ProductCard key={product.id} product={product} />
+            )
+          }
         </div>
         <button className="p-3 bg-gray-800 text-white text-center">Load More </ button>
       </div>

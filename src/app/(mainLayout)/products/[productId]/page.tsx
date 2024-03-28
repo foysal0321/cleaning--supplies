@@ -1,24 +1,23 @@
 import Image from 'next/image'
 import heart from '../../../../image/icon/heart.svg'
 import star from '../../../../image/icon/star.svg'
-import item from '../../../../image/homeImg/slider1.jpg'
 
-export default async function ProductDetailsPage({ params }) {
+export default async function ProductDetailsPage({ params }: { params: any }) {
 
-    const res = await fetch(`http://localhost:5000/products/${params.productId}`, {
+    const res = await fetch(`https://cleaning-supplies.vercel.app/products/${params.productId}`, {
         next: {
             revalidate: 30
         }
     })
     const product = await res.json()
     //console.log(product.image);
-    
+
 
     return (
         <div className='max-w-[1250px] mx-auto py-20'>
             <div className="flex flex-wrap gap-10">
                 <div className="">
-                    <Image src={product?.image} width={500} height={400}  alt='star' className='h-[400px]' />
+                    <Image src={product?.image} width={500} height={400} alt='star' className='h-[400px]' />
                 </div>
                 <div className="max-w-[600px]">
                     <div className="flex justify-between">

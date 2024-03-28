@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
+
 export const Navbars = () => {
   const [nav, setNav] = useState(false);
 
@@ -25,7 +26,7 @@ export const Navbars = () => {
     <div className="bg-neutral-700 text-white">
       <div className='flex justify-between items-center h-20 max-w-[1300px] mx-auto text-zinc-950 p-6'>
         <Link href='/'>
-         Logo
+         <h2 className='text-2xl font-bold text-white'>Clanora</h2>
         </Link>
         <ul className='hidden lg:flex'>
           {navItems.map((v: any) => (
@@ -38,7 +39,7 @@ export const Navbars = () => {
           ))}
         </ul>
         <div onClick={handleNav} className='block lg:hidden'>
-          {/* {nav ? <SidebarClose size={20} /> : <MenuIcon size={20} />} */}
+          {/* {nav ? <CloseIcon className='text-white'  /> : <MenuIcon className='text-white' />} */}
         </div>
         <ul
           className={
