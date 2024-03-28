@@ -14,13 +14,13 @@ export default async function ProductDetailsPage({ params }: { params: any }) {
 
 
     return (
-        <div className='max-w-[1250px] mx-auto py-20'>
+        <div className='max-w-[1250px] mx-auto py-20 p-5'>
             <div className="flex flex-wrap gap-10">
                 <div className="">
-                    <Image src={product?.image} width={500} height={400} alt='star' className='h-[400px]' />
+                    <Image src={product?.image} width={500} height={400} alt='star' className='h-[400px] w-[350px] md:w-[500px]' />
                 </div>
                 <div className="max-w-[600px]">
-                    <div className="flex justify-between">
+                    <div className="flex justify-between flex-wrap">
                         <h2 className='text-xl font-semibold py-6'>{product.title}</h2>
                         <Image src={heart} width={30} alt='heart' />
                     </div>

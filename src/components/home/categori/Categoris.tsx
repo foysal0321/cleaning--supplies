@@ -14,16 +14,16 @@ export default async function Categoris() {
   const products = await res.json()
 
   return (
-    <div className="max-w-[1250px] mx-auto py-24">
+    <div className="max-w-[1250px] mx-auto py-24 p-5">
       <div className="text-center py-8">
         <h1 className="text-3xl font-semibold py-4">Categories</h1>
         <p>Our cleaning experts deliver the highest quality of clean  you can always count,</p>
       </div>
       <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 
           {products?.slice(0, 4).map((p: any) => (
-            <div key={p._id} className='h-[350px] border border-gray-200 w-[300px]'>
+            <div key={p._id} className='h-[350px] border border-gray-200 w-[300px] mx-auto'>
               <Link href={`/products?category=${encodeURIComponent(
                 p.category
               )}`}>

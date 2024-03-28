@@ -15,16 +15,16 @@ export default async function Products() {
 
   return (
     <div>
-      <div className="max-w-[1200px] mx-auto py-24">
+      <div className="max-w-[1250px] mx-auto py-24 p-5">
         <div className="flex justify-between flex-wrap">
-          <h2 className='text-3xl font-semibold'>Most Popular Products</h2>
+          <h2 className='text-3xl font-semibold py-2'>Most Popular Products</h2>
           <Link href='/products'>
-            <button className="p-3 bg-gray-800 text-white ">View All </ button></Link>
+            <button className="p-3 bg-gray-800 text-white py-2">View All </ button></Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-8">
           {
             sortProducts.slice(0, 8)?.map((data: any) => (
-              <div key={data._id} className=' h-[410px] border border-gray-200 '>
+              <div key={data._id} className=' h-[410px] border border-gray-200 w-[300px] mx-auto'>
                 <Image src={data.image} alt='flash' width={300} height={300} className='relative z-10 h-[270px]' />
                 <h2 className=" font-semibold py-2 p-3">{data.title}</h2>
                 <div className="flex text-gray-600 mt-2">
@@ -33,7 +33,7 @@ export default async function Products() {
                 </div>
                 <div className='flex justify-between py-5 p-3 items-center text-gray-600'>
                   <h6 className='font-semibold'>${data.price}</h6>
-                  <Link href='/products' className='p-1 px-2 font-semibold bg-gray-100 rounded-full' >Buy Now</Link>
+                  <Link href={`/products/${data._id}`} className='p-1 px-2 font-semibold bg-gray-100 rounded-full' >Buy Now</Link>
                 </div>
               </div>
             ))

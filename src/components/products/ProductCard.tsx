@@ -7,15 +7,16 @@ type TProduct = {
   price: string | number
   ratings: number
   description: string,
-  _id: string
+  _id: string,
+  category: string
 }
 
 export default function ProductCard ({product}: {product: TProduct}) {
-    const {title, image, description, price, ratings, _id} = product
+    const {title, image, description, price, ratings, _id, category} = product
 
   return (
   <Link href={`/products/${_id}`}>
-    <div key={_id} className=' h-[400px] border border-gray-200 '>
+    <div key={_id} className=' h-[400px] w-[300px] border border-gray-200 '>
      
     <h5 className="absolute z-30 text-white font-semibold text-xl bg-gray-800">-15% </h5>
      

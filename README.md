@@ -17,5 +17,6 @@
 
 # Full mobile first responsive UI design in Fixel perfect
 
-* Live Url: https://cleaning-supplies-foysal0321-foysal0321s-projects.vercel.app/
+* Live Url: https://cleaning-store-platform.vercel.app/
+* Client side repository: https://github.com/foysal0321/cleaning--supplies
 * Server side repositori:  https://github.com/foysal0321/cleaning-supplies-backend

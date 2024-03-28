@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
+import { AiOutlineMenu } from "react-icons/ai";
 
 
 export const Navbars = () => {
@@ -13,12 +15,12 @@ export const Navbars = () => {
 
   const navItems = [
    {id: 1, item: <Link href='/'>Home</Link>},
-   {id: 2, item: <Link href='/'>Categoris</Link>},
+  //  {id: 2, item: <Link href='/'>Categoris</Link>},
    {id: 3, item: <Link href='/products'>Products</Link>},
    {id: 4, item: <Link href='/flash-sale'>Flash Sale</Link>},
-   {id: 5, item: <Link href='/'>About Us</Link>},
-   {id: 6, item: <Link href='/'>Contact Us</Link>},
-   {id: 7, item: <Link href='/dashboard'>Dashboard</Link>},
+   {id: 5, item: <Link href='/about'>About Us</Link>},
+   {id: 6, item: <Link href='/contact'>Contact Us</Link>},
+  {id: 7, item: <Link href='/dashboard'>Dashboard</Link>},
   
   ];
 
@@ -37,9 +39,9 @@ export const Navbars = () => {
               {v.item}
             </li>
           ))}
-        </ul>
+        </ul> 
         <div onClick={handleNav} className='block lg:hidden'>
-          {/* {nav ? <CloseIcon className='text-white'  /> : <MenuIcon className='text-white' />} */}
+          {nav ? <IoMdClose className='text-2xl text-white'  /> : <  AiOutlineMenu className='text-2xl text-white' />}
         </div>
         <ul
           className={
